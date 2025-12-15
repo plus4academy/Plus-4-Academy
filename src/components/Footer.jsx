@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="developer-credit">
               <span>Liked the website?</span>
               <a
-                href="https://your-portfolio-link.com"
+                href="https://portfolio-i5u7.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="developer-link"
