@@ -1488,7 +1488,44 @@ section {
     min-height: 250px;
   }
 }
+.developer-credit {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #d1d5db;
+}
 
+.developer-link {
+  color: #facc15;
+  /* yellow highlight */
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.developer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #facc15, #8b5cf6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.developer-link:hover {
+  color: #fde047;
+}
+
+.developer-link:hover::after {
+  transform: scaleX(1);
+}
 /* ========================================
    Refund Policy Modal Styles
    ======================================== */

@@ -61,17 +61,30 @@ export default function Footer() {
           {/* Footer Bottom */}
           <div className="footer-bottom">
             <p>© {currentYear} Plus 4 Academy. All rights reserved.</p>
+
             <button
               className="refund-policy-link"
               onClick={() => setIsRefundModalOpen(true)}
             >
               Refund Policy
             </button>
+
+            <div className="developer-credit">
+              <span>Liked the website?</span>
+              <a
+                href="https://your-portfolio-link.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="developer-link"
+              >
+                Meet the developer →
+              </a>
+            </div>
           </div>
         </div>
       </footer>
 
-      {/* Refund Policy Modal */}
+      {/* Modal OUTSIDE footer */}
       <RefundPolicyModal
         isOpen={isRefundModalOpen}
         onClose={() => setIsRefundModalOpen(false)}

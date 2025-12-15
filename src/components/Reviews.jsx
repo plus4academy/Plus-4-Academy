@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 
 export default function Reviews() {
@@ -15,15 +14,8 @@ export default function Reviews() {
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
+    if (ref.current) observer.observe(ref.current);
+    return () => ref.current && observer.unobserve(ref.current);
   }, []);
 
   return (
@@ -32,19 +24,12 @@ export default function Reviews() {
         <h2 className="section-title">Student Reviews</h2>
 
         <div className="reviews-content">
-          <div className="reviews-scroll-wrapper">
-            <div
-              className="sk-ww-google-reviews"
-              data-embed-id="25631484"
-            ></div>
-          </div>
+          <div
+            className="elfsight-app-66ae7975-903b-4fcc-b944-0e8f234d7af7"
+            data-elfsight-app-lazy
+          ></div>
         </div>
       </div>
-
-      <script
-        src="https://widgets.sociablekit.com/google-reviews/widget.js"
-        defer
-      ></script>
     </section>
   );
 }
