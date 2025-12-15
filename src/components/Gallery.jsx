@@ -36,7 +36,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="gallery" ref={ref}>
+    <section id="gallery" className="gallery" ref={ref}>
       <div className="gallery-container">
         <h2 className="section-title">Our Gallery</h2>
 

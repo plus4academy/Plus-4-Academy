@@ -2,13 +2,16 @@
 
 import { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
+
 export default function JoinUsForm() {
   const ref = useRef(null);
+
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
     courseInterested: "Class 9 Foundation",
   });
+
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -21,57 +24,49 @@ export default function JoinUsForm() {
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    if (ref.current) observer.observe(ref.current);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (ref.current) observer.unobserve(ref.current);
     };
   }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
- const handleSubmit = (e) => {
-   e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-   emailjs
-     .send(
-       "service_bdaxi9o",
-       "template_xye3969",
-       {
-         fullName: formData.fullName,
-         phoneNumber: formData.phoneNumber,
-         courseInterested: formData.courseInterested,
-       },
-       "zLj_h-Xd_MFQwEg61"
-     )
-     .then(() => {
-       setSubmitted(true);
+    emailjs
+      .send(
+        "service_bdaxi9o",
+        "template_xye3969",
+        {
+          fullName: formData.fullName,
+          phoneNumber: formData.phoneNumber,
+          courseInterested: formData.courseInterested,
+        },
+        "zLj_h-Xd_MFQwEg61"
+      )
+      .then(() => {
+        setSubmitted(true);
 
-       setTimeout(() => {
-         setSubmitted(false);
-         setFormData({
-           fullName: "",
-           phoneNumber: "",
-           courseInterested: "Class 9 Foundation",
-         });
-       }, 3000);
-     })
-     .catch((error) => {
-       console.error("EmailJS Error:", error);
-       alert("Failed to send enquiry. Please try again.");
-     });
- };
-
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            fullName: "",
+            phoneNumber: "",
+            courseInterested: "Class 9 Foundation",
+          });
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send enquiry. Please try again.");
+      });
+  };
 
   return (
     <section className="join-us" ref={ref}>
@@ -81,6 +76,52 @@ export default function JoinUsForm() {
           <p className="form-subtitle">
             Take the first step towards academic excellence
           </p>
+
+          {/* ===== Beta Notice ===== */}
+          <div className="beta-notice">
+            <p>
+              Please note: This is currently a beta version of our platform.
+              While we strive for excellence, you may encounter minor issues
+              that will be resolved in upcoming updates. We appreciate your
+              patience and feedback.
+            </p>
+
+            {/* Beta Notice CSS – ONLY THIS */}
+            <style>{`
+              .beta-notice {
+                background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+                border-left: 4px solid #f59e0b;
+                padding: 16px 20px;
+                margin-bottom: 24px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+                position: relative;
+                overflow: hidden;
+              }
+
+              .beta-notice::before {
+                content: "⚠";
+                position: absolute;
+                top: 50%;
+                left: -8px;
+                transform: translateY(-50%);
+                font-size: 48px;
+                color: rgba(245, 158, 11, 0.2);
+                z-index: 0;
+              }
+
+              .beta-notice p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.6;
+                color: #78350f;
+                font-weight: 500;
+                position: relative;
+                z-index: 1;
+              }
+            `}</style>
+          </div>
+          {/* ===== End Beta Notice ===== */}
 
           {submitted ? (
             <div className="success-message">
