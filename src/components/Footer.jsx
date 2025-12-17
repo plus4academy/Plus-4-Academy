@@ -13,11 +13,7 @@ export default function Footer() {
 
             <p className="address">
               <a
-<<<<<<< HEAD
-                href="https://portfolio-i5u7.vercel.app/"
-=======
                 href="https://www.google.com/maps/place/Impulse+Academy+for+9th+to+12th+JEE+%26+NEET/@23.1682732,79.9101106,17z"
->>>>>>> b19a119 (adding urls)
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-link"
@@ -68,7 +64,7 @@ export default function Footer() {
           <div className="developer-credit">
             <span>Liked the website?</span>
             <a
-              href="https://your-portfolio-link.com"
+              href="https://portfolio-i5u7.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="developer-link"
