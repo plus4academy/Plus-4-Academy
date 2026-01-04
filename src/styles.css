@@ -2838,6 +2838,27 @@ section {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .course-detail-header-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .course-detail-logo {
+    font-size: 20px;
+  }
+
+  .course-detail-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .course-detail-nav-link {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
   .course-detail-content {
     padding: 30px 20px;
   }
