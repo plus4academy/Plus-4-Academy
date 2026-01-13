@@ -1,13 +1,13 @@
 /* Contact Us Page Styles */
 .contact-us-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f9f5ff 0%, #ffffff 50%, #fef3c7 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 60%, #FEF3C7 100%);
 }
 
 /* Header */
 .contact-header {
     background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -25,25 +25,24 @@
 .contact-logo {
     font-size: 24px;
     font-weight: 700;
-    color: #8b5cf6;
+    color: #0A4D8C;
     font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 .contact-back-button {
     padding: 10px 24px;
-    background: #8b5cf6;
+    background: #0A4D8C;
     color: white;
-    border-radius: 8px;
     text-decoration: none;
+    border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 .contact-back-button:hover {
-    background: #7c3aed;
+    background: #1E6FB8;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(10, 77, 140, 0.25);
 }
 
 /* Main Content */
@@ -62,24 +61,21 @@
 .contact-page-title {
     font-size: 48px;
     font-weight: 700;
-    color: #6b21a8;
-    margin-bottom: 15px;
+    color: #0A4D8C;
     font-family: "Poppins", sans-serif;
 }
 
 .contact-title-divider {
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #8b5cf6, #fbbf24);
+    background: linear-gradient(90deg, #0A4D8C, #F5A623);
     margin: 0 auto 30px;
     border-radius: 2px;
 }
 
 .contact-intro {
     font-size: 18px;
-    color: #4b5563;
-    max-width: 700px;
-    margin: 0 auto;
+    color: #475569;
     line-height: 1.8;
     font-family: "Roboto", sans-serif;
 }
@@ -100,7 +96,7 @@
     text-align: center;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     cursor: pointer;
@@ -125,7 +121,7 @@
 
 .contact-info-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
 }
 
 .contact-card-overlay {
@@ -158,7 +154,7 @@
 .contact-card-title {
     font-size: 24px;
     font-weight: 700;
-    color: #1f2937;
+    color: #0F172A;
     margin-bottom: 12px;
     font-family: "Poppins", sans-serif;
     transition: color 0.3s ease;
@@ -190,7 +186,7 @@
 
 .message-info-box {
     background: linear-gradient(135deg, #f3e8ff, #fef3c7);
-    border-left: 4px solid #8b5cf6;
+    border-left: 4px solid #0A4D8C;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -205,7 +201,7 @@
 }
 
 .message-info-text strong {
-    color: #6b21a8;
+    color: #0A4D8C;
 }
 
 .message-form {
@@ -227,8 +223,8 @@
 
 .message-textarea:focus {
     outline: none;
-    border-color: #8b5cf6;
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    border-color: #0A4D8C;
+    box-shadow: 0 0 0 3px rgba(10, 77, 140, 0.12);
 }
 
 .submit-status {
@@ -265,7 +261,7 @@
 }
 
 .message-submit-btn {
-    background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+    background: linear-gradient(135deg, #0A4D8C, #0F172A);
     color: white;
     border: none;
     padding: 16px 32px;
@@ -279,7 +275,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 166, 35, 0.35);
 }
 
 .message-submit-btn:hover:not(:disabled) {
@@ -323,7 +319,7 @@
 .map-section-title {
     font-size: 32px;
     font-weight: 700;
-    color: #6b21a8;
+    color: #0F172A;
     text-align: center;
     margin-bottom: 30px;
     font-family: "Poppins", sans-serif;

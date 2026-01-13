@@ -133,7 +133,7 @@ section {
    ======================================== */
 /* Updated top bar styling with flexbox layout and clickable links */
 .top-bar {
-  background: linear-gradient(135deg, #6b21a8 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #0A4D8C 0%, #6366f1 100%);
   color: white;
   padding: 8px 0;
   position: sticky;
@@ -247,12 +247,12 @@ section {
   left: 0;
   width: 0;
   height: 2px;
-  background: #8b5cf6;
+  background: #2563EB;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #8b5cf6;
+  color: #2563EB;
 }
 
 .nav-link:hover::after {
@@ -260,7 +260,7 @@ section {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6b21a8 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #0A4D8C 100%);
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
@@ -383,7 +383,7 @@ section {
 .hero-title {
   font-size: 48px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 20px;
   line-height: 1.2;
   font-family: "Poppins", sans-serif;
@@ -398,7 +398,7 @@ section {
 }
 
 .hero-button {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6b21a8 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #0A4D8C 100%);
   color: white;
   padding: 15px 40px;
   border: none;
@@ -428,22 +428,6 @@ section {
   animation: pulse 3s ease-in-out infinite;
 }
 
-/* .shape-1 {
-  width: 300px;
-  height: 300px;
-  background: #8b5cf6;
-  top: 0;
-  right: 0;
-}
-
-.shape-2 {
-  width: 200px;
-  height: 200px;
-  background: #f59e0b;
-  bottom: 0;
-  left: 50px;
-  animation-delay: 0.5s;
-} */
 
 /* Added styles for interactive cards */
 .hero-cards {
@@ -469,7 +453,7 @@ section {
 }
 
 .hero-card-purple {
-  background: #8b5cf6;
+  background: #2563EB;
 }
 
 .hero-card-orange {
@@ -606,7 +590,7 @@ section {
 .section-title {
   font-size: 42px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   text-align: center;
   margin-bottom: 50px;
   font-family: "Poppins", sans-serif;
@@ -630,7 +614,7 @@ section {
 .faculty-subtitle {
   font-size: 24px;
   font-weight: 600;
-  color: #8b5cf6;
+  color: #2563EB;
   margin-bottom: 15px;
   margin-top: 10px;
   font-family: "Poppins", sans-serif;
@@ -647,7 +631,7 @@ section {
 
 .emphasis-text {
   font-weight: 600;
-  color: #6b21a8;
+  color: #0A4D8C;
   font-style: italic;
   font-family: "Merriweather", serif;
 }
@@ -663,7 +647,7 @@ section {
   margin-top: 40px;
   padding: 30px;
   background: linear-gradient(135deg, #f9f5ff 0%, #f3e8ff 100%);
-  border-left: 5px solid #8b5cf6;
+  border-left: 5px solid #2563EB;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(139, 92, 246, 0.08);
   animation: fadeInUp 0.6s ease-out forwards;
@@ -719,7 +703,7 @@ section {
 .why-us-title {
   font-size: 22px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
 }
@@ -772,7 +756,7 @@ section {
   content: "→";
   position: absolute;
   left: 0;
-  color: #8b5cf6;
+  color: #2563EB;
   font-weight: bold;
   font-size: 18px;
 }
@@ -821,14 +805,14 @@ section {
 .course-card:hover {
   transform: translateY(-12px) scale(1.02);
   box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
-  border-color: #8b5cf6;
+  border-color: #2563EB;
   background: linear-gradient(135deg, #fafafa 0%, #f3e8ff 100%);
 }
 
 .course-card h4 {
   font-size: 18px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
 }
@@ -923,8 +907,7 @@ section {
   z-index: 999;
   box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  /* writing-mode: vertical-rl;
-  text-orientation: mixed; */
+  
 }
 
 .floating-join-button:hover {
@@ -955,7 +938,7 @@ section {
 /* Updated gallery to use horizontal scrolling */
 .gallery {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #f3e8ff 0%, #fef3c7 50%, #dbeafe 100%);
+  background: linear-gradient(135deg, #f3e8ff 0%, #fef3c7 100%);
 }
 
 .gallery-container {
@@ -1050,7 +1033,7 @@ section {
   padding: 20px;
   font-size: 16px;
   font-weight: 600;
-  color: #6b21a8;
+  color: #0A4D8C;
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
@@ -1125,13 +1108,13 @@ section {
 }
 
 .reviews-scroll-wrapper::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6b21a8 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #0A4D8C 100%);
   border-radius: 10px;
   animation: pulse 3s ease-in-out infinite;
 }
 
 .reviews-scroll-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #6b21a8;
+  background: #0A4D8C;
 }
 
 .sk-ww-google-reviews {
@@ -1185,7 +1168,7 @@ section {
 .form-title {
   font-size: 32px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 10px;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -1253,12 +1236,12 @@ section {
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(10, 77, 140, 0.12);;
 }
 
 .submit-button {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6b21a8 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #0A4D8C 100%);
   color: white;
   padding: 14px;
   border: none;
@@ -1363,7 +1346,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6b21a8;
+  color: #0A4D8C;
   transition: all 0.3s ease;
   z-index: 10;
   font-weight: 300;
@@ -1371,7 +1354,7 @@ section {
 }
 
 .join-modal-close:hover {
-  background: #6b21a8;
+  background: #0A4D8C;
   color: white;
   transform: rotate(90deg);
 }
@@ -1417,7 +1400,7 @@ section {
 .footer-section h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -1436,7 +1419,7 @@ section {
 }
 
 .footer-link:hover {
-  color: #8b5cf6;
+  color: #2563EB;
   text-decoration: underline;
 }
 
@@ -1462,7 +1445,7 @@ section {
 .refund-policy-link {
   background: none;
   border: none;
-  /* color: #8b5cf6; */
+  /* color: #2563EB; */
   color: #6366f1;
   font-size: 14px;
   font-weight: 600;
@@ -1517,7 +1500,7 @@ section {
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #facc15, #8b5cf6);
+  background: linear-gradient(90deg, #facc15, #2563EB);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -1560,14 +1543,14 @@ section {
 .refund-logo {
   font-size: 24px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
 
 .refund-back-button {
   padding: 10px 24px;
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -1577,7 +1560,7 @@ section {
 }
 
 .refund-back-button:hover {
-  background: #7c3aed;
+  background: #1E6FB8;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
@@ -1598,7 +1581,7 @@ section {
 .refund-page-title {
   font-size: 48px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
 }
@@ -1606,7 +1589,7 @@ section {
 .refund-title-divider {
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #8b5cf6, #fbbf24);
+  background: linear-gradient(90deg, #2563EB, #fbbf24);
   margin: 0 auto 30px;
   border-radius: 2px;
 }
@@ -1623,11 +1606,11 @@ section {
 /* Notice Box */
 .refund-notice-box {
   background: linear-gradient(135deg, #f3e8ff, #fef3c7);
-  border-left: 4px solid #8b5cf6;
+  border-left: 4px solid #2563EB;
   padding: 25px;
   margin-bottom: 50px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 15px rgba(10, 77, 140, 0.12);;
 }
 
 .refund-notice-box p {
@@ -1639,7 +1622,7 @@ section {
 
 .refund-notice-label {
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
 }
 
 /* Policy Cards */
@@ -1655,7 +1638,7 @@ section {
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  border-left: 5px solid #8b5cf6;
+  border-left: 5px solid #2563EB;
   transition: all 0.3s ease;
 }
 
@@ -1686,7 +1669,7 @@ section {
 .refund-section-title {
   font-size: 26px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -1707,7 +1690,7 @@ section {
 .refund-subsection-title {
   font-size: 18px;
   font-weight: 600;
-  color: #7c3aed;
+  color: #1E6FB8;
   margin-bottom: 12px;
   font-family: "Poppins", sans-serif;
 }
@@ -1733,7 +1716,7 @@ section {
 }
 
 .refund-arrow {
-  color: #8b5cf6;
+  color: #2563EB;
   font-weight: 700;
   font-size: 18px;
   margin-top: 2px;
@@ -1741,7 +1724,7 @@ section {
 }
 
 .refund-bullet {
-  color: #8b5cf6;
+  color: #2563EB;
   font-weight: 700;
   font-size: 24px;
   flex-shrink: 0;
@@ -1749,7 +1732,7 @@ section {
 
 /* Contact Section */
 .refund-contact-section {
-  background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+  background: linear-gradient(135deg, #2563EB, #0A4D8C);
   color: white;
   border-radius: 16px;
   padding: 40px;
@@ -1912,7 +1895,7 @@ section {
 .courses-logo {
   font-size: 24px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
@@ -1934,16 +1917,16 @@ section {
 
 .courses-nav-link:hover {
   background: #f3e8ff;
-  color: #8b5cf6;
+  color: #2563EB;
 }
 
 .courses-cart-link {
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
 }
 
 .courses-cart-link:hover {
-  background: #7c3aed;
+  background: #1E6FB8;
 }
 
 .courses-main {
@@ -1960,7 +1943,7 @@ section {
 .courses-page-title {
   font-size: 48px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
 }
@@ -1968,7 +1951,7 @@ section {
 .courses-title-divider {
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #8b5cf6, #fbbf24);
+  background: linear-gradient(90deg, #2563EB, #fbbf24);
   margin: 0 auto 30px;
   border-radius: 2px;
 }
@@ -1988,9 +1971,9 @@ section {
 
 .view-toggle-btn {
   padding: 10px 24px;
-  border: 2px solid #8b5cf6;
+  border: 2px solid #2563EB;
   background: white;
-  color: #8b5cf6;
+  color: #2563EB;
   border-radius: 8px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -1999,7 +1982,7 @@ section {
 }
 
 .view-toggle-btn.active {
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
 }
 
@@ -2081,13 +2064,13 @@ section {
 .course-price {
   font-size: 24px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
 }
 
 .course-add-btn {
   padding: 12px 24px;
-  background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+  background: linear-gradient(135deg, #2563EB, #0A4D8C);
   color: white;
   border: none;
   border-radius: 8px;
@@ -2140,7 +2123,7 @@ section {
 .cart-logo {
   font-size: 24px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
@@ -2162,7 +2145,7 @@ section {
 
 .cart-nav-link:hover {
   background: #f3e8ff;
-  color: #8b5cf6;
+  color: #2563EB;
 }
 
 .cart-main {
@@ -2179,7 +2162,7 @@ section {
 .cart-page-title {
   font-size: 48px;
   font-weight: 700;
-  color: #6b21a8;
+  color: #0A4D8C;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
 }
@@ -2187,7 +2170,7 @@ section {
 .cart-title-divider {
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #8b5cf6, #fbbf24);
+  background: linear-gradient(90deg, #2563EB, #fbbf24);
   margin: 0 auto 20px;
   border-radius: 2px;
 }
@@ -2256,7 +2239,7 @@ section {
 .cart-item-price {
   font-size: 20px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
 }
 
@@ -2329,7 +2312,7 @@ section {
 .cart-buy-btn {
   width: 100%;
   padding: 16px;
-  background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+  background: linear-gradient(135deg, #2563EB, #0A4D8C);
   color: white;
   border: none;
   border-radius: 12px;
@@ -2350,7 +2333,7 @@ section {
   display: block;
   text-align: center;
   margin-top: 15px;
-  color: #8b5cf6;
+  color: #2563EB;
   text-decoration: none;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
@@ -2358,7 +2341,7 @@ section {
 }
 
 .cart-continue-shopping:hover {
-  color: #6b21a8;
+  color: #0A4D8C;
 }
 
 /* Empty Cart */
@@ -2391,7 +2374,7 @@ section {
 .empty-cart-btn {
   display: inline-block;
   padding: 16px 40px;
-  background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+  background: linear-gradient(135deg, #2563EB, #0A4D8C);
   color: white;
   text-decoration: none;
   border-radius: 12px;
@@ -2577,7 +2560,7 @@ section {
 .course-detail-logo {
   font-size: 24px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
@@ -2599,16 +2582,16 @@ section {
 
 .course-detail-nav-link:hover {
   background: #f3e8ff;
-  color: #8b5cf6;
+  color: #2563EB;
 }
 
 .course-detail-cart-link {
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
 }
 
 .course-detail-cart-link:hover {
-  background: #7c3aed;
+  background: #1E6FB8;
 }
 
 .course-detail-main {
@@ -2650,7 +2633,7 @@ section {
 
 .course-detail-short-desc {
   font-size: 20px;
-  color: #8b5cf6;
+  color: #2563EB;
   font-weight: 600;
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
@@ -2663,7 +2646,7 @@ section {
 .course-detail-price {
   font-size: 40px;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #2563EB;
   font-family: "Poppins", sans-serif;
 }
 
@@ -2716,7 +2699,7 @@ section {
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 30px;
-  border-left: 4px solid #8b5cf6;
+  border-left: 4px solid #2563EB;
 }
 
 .course-detail-ideal p {
@@ -2730,7 +2713,7 @@ section {
 .course-detail-add-btn {
   width: 100%;
   padding: 18px;
-  background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+  background: linear-gradient(135deg, #2563EB, #0A4D8C);
   color: white;
   border: none;
   border-radius: 12px;
@@ -2765,7 +2748,7 @@ section {
   display: inline-block;
   margin-top: 30px;
   padding: 14px 32px;
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -2775,7 +2758,7 @@ section {
 }
 
 .back-to-courses-btn:hover {
-  background: #7c3aed;
+  background: #1E6FB8;
   transform: translateY(-2px);
 }
 
@@ -2793,8 +2776,8 @@ section {
   flex: 1;
   padding: 12px 24px;
   background: white;
-  color: #8b5cf6;
-  border: 2px solid #8b5cf6;
+  color: #2563EB;
+  border: 2px solid #2563EB;
   border-radius: 8px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -2803,7 +2786,7 @@ section {
 }
 
 .course-explore-btn:hover {
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
@@ -2812,7 +2795,7 @@ section {
 .course-add-btn {
   flex: 1;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #8b5cf6, #6b21a8);
+  background: linear-gradient(135deg, #2563EB, #0A4D8C);
   color: white;
   border: none;
   border-radius: 8px;
