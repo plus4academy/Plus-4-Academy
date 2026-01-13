@@ -157,13 +157,13 @@ export default function TermsandConditions() {
         .terms-logo {
           font-size: 1.5rem;
           font-weight: 700;
-          color: #8b5cf6;
+          color:#2563EB;
           margin: 0;
         }
 
         .terms-back-button {
           padding: 10px 24px;
-  background: #8b5cf6;
+  background: #2563EB;
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -173,7 +173,7 @@ export default function TermsandConditions() {
         }
 
         .terms-back-button:hover {
-          background: #7c3aed;
+          background: #1E6FB8;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
         }
@@ -192,14 +192,14 @@ export default function TermsandConditions() {
         .terms-page-title {
           font-size: 2.5rem;
           font-weight: 800;
-          color: #7c3aed;
+          color:#0A4D8C;
           margin: 0 0 1rem 0;
         }
 
         .terms-title-divider {
           width: 80px;
           height: 4px;
-          background: linear-gradient(to right, #7c3aed, #a855f7);
+          background: linear-gradient(to right,#0A4D8C, #a855f7);
           margin: 0 auto 1.5rem;
           border-radius: 2px;
         }
