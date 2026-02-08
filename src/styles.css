@@ -198,8 +198,7 @@ section {
 .navbar-container {
   height: 70px;
   display: flex;
-  align-items: stretch;
-  /* 🔥 NOT center */
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -207,24 +206,86 @@ section {
 .navbar-logo {
   height: 100%;
   display: flex;
-  align-items: stretch;
-  /* 🔥 force full height usage */
+  align-items: center;
 }
 
 /* Logo image */
 .navbar-logo-img {
-  height: 100%;
-  /* 🔥 fills navbar vertically */
+  height: 85%;
   width: auto;
   display: block;
-  /* 🔥 removes baseline gap */
   object-fit: contain;
-  /* keeps logo proportions */
 }
+
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 24px;
   align-items: center;
+}
+
+/* Scolsat Special Button */
+.scolsat-button {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  position: relative;
+  border-radius: 25px 8px 25px 8px;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.scolsat-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #ffd54f 0%, #ffb300 100%);
+  border-radius: 26px 9px 26px 9px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scolsat-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+.scolsat-button:hover::before {
+  opacity: 1;
+}
+
+.scolsat-text {
+  font-size: 15px;
+}
+
+.scolsat-icon {
+  font-size: 16px;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .nav-link {
@@ -247,12 +308,12 @@ section {
   left: 0;
   width: 0;
   height: 2px;
-  background: #2563EB;
+  background: #2563eb;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #2563EB;
+  color: #2563eb;
 }
 
 .nav-link:hover::after {
@@ -260,7 +321,7 @@ section {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #2563EB 0%, #0A4D8C 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #0a4d8c 100%);
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
@@ -270,6 +331,8 @@ section {
 
 .cta-button:hover {
   color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .cta-button::after {
@@ -283,6 +346,7 @@ section {
   border: none;
   cursor: pointer;
   gap: 6px;
+  padding: 8px;
 }
 
 .hamburger span {
@@ -294,67 +358,117 @@ section {
 }
 
 @media (max-width: 768px) {
-  .navbar-container {
-      height: 60px;
-      align-items: stretch;
-      /* 🔥 REQUIRED on mobile */
-    }
-  
-    .navbar-logo {
-      height: 100%;
-      align-items: stretch;
-      /* 🔥 REQUIRED on mobile */
-    }
-  
-    .navbar-logo-img {
-      height: 100%;
-      /* 🔥 force fill */
-      max-height: none;
-      display: block;
-      object-fit: contain;
-      
-    }
- .hamburger {
-   width: 40px;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
+  .navbar {
+    top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
- .hamburger span {
-   width: 22px;
-   height: 3px;
- }
-    .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      max-height: 0;
-      padding: 0;
-      /* 🔥 important */
-      transition: max-height 0.3s ease;
-      border-bottom: 1px solid #f0f0f0;
-    }
-  
-    .nav-links.open {
-      max-height: 400px;
-      padding: 20px;
-      /* padding ONLY when open */
-    }
+  .navbar-container {
+    height: 65px;
+    padding: 0;
+  }
+
+  .navbar-logo {
+    height: 100%;
+  }
+
+  .navbar-logo-img {
+    height: 75%;
+    max-height: 50px;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 10;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    gap: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.open {
+    max-height: 500px;
+    padding: 15px 20px 20px 20px;
+    gap: 8px;
+  }
+
+  .scolsat-button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 20px 6px 20px 6px;
+    margin-bottom: 10px;
+  }
+
+  .scolsat-button::before {
+    border-radius: 21px 7px 21px 7px;
+  }
 
   .nav-link {
-    display: block;
+    width: 100%;
     text-align: left;
-    padding: 10px 0;
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link:hover {
+    background: #f8f9fa;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    margin-top: 8px;
+    font-size: 15px;
   }
 }
+.scolsat-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  /* inherit font from parent */
+  color: inherit;
+  /* inherit text color */
+  text-decoration: none;
+  /* remove underline */
+}
 
+.scolsat-button:hover {
+  text-decoration: none;
+  /* keep underline off on hover */
+  color: inherit;
+  /* optional: prevent hover color change */
+}
 /* ========================================
    Hero Styles
    ======================================== */
