@@ -1,4 +1,3 @@
-"use client";
 import logo from "../assets/SiteLogo.png";
 import { Link } from "react-router-dom";
 
@@ -34,25 +33,40 @@ export default function Navbar({
         </button>
 
         <div className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>
+          <a
+            href="https://quiz-app-production-9e39.up.railway.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="scolsat-button"
+          >
+            <span className="scolsat-text">Scolsat</span>
+            <span className="scolsat-icon">🚀</span>
+          </a>
+
           <button onClick={onHomeClick} className="nav-link">
             Home
           </button>
+
           <button onClick={onAboutClick} className="nav-link">
             About Us
           </button>
+
           <button onClick={onGalleryClick} className="nav-link">
             Our Gallery
           </button>
-          <button onClick={onReviewsClick} className="nav-link" >
+
+          <button onClick={onReviewsClick} className="nav-link">
             Reviews
           </button>
+
           <Link
             to="/ContactUs"
-            className="nav-link" 
+            className="nav-link"
             onClick={() => setMobileMenuOpen(false)}
           >
             Contact Us
           </Link>
+
           <button onClick={onJoinClick} className="nav-link cta-button">
             Join Us
           </button>
