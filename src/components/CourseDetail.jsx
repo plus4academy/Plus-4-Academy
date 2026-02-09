@@ -71,6 +71,11 @@ export default function CourseDetail() {
             <div className="course-detail-ideal">
               <p className="ideal-text">👉 {course.ideal}</p>
             </div>
+
+            {/* Optional: Add a "Coming Soon" or info message */}
+            <div className="course-info-banner">
+              <p>📚 Explore our course offerings. Enrollment details coming soon!</p>
+            </div>
           </div>
         </div>
       </main>
