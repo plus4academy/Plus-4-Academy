@@ -3,7 +3,7 @@
 // src/components/CourseDetail.jsx
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { getCourseById } from "../data/coursesData";
+import { getCourseById } from "../data/coursesData.js";
 
 export default function CourseDetail() {
   const { courseId } = useParams();
@@ -72,7 +72,6 @@ export default function CourseDetail() {
               <p className="ideal-text">👉 {course.ideal}</p>
             </div>
 
-            {/* Optional: Add a "Coming Soon" or info message */}
             <div className="course-info-banner">
               <p>📚 Explore our course offerings. Enrollment details coming soon!</p>
             </div>
