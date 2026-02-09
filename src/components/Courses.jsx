@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useCart } from "./CartContext";
 
 // Import images
 import img9th from "../assets/9th_foundation.jpg";
@@ -14,7 +13,6 @@ import imgNeetCrash from "../assets/neet_crash.png";
 
 export default function Courses() {
   const navigate = useNavigate();
-  const { addToCart, isInCart } = useCart();
   const [viewMode, setViewMode] = useState("vertical");
 
   const courses = [
@@ -22,64 +20,51 @@ export default function Courses() {
       id: 1,
       title: "Class 9 Foundation Course",
       description: "Strong Basics. Smart Start. Confident Future.",
-      price: 14999,
       image: img9th,
     },
     {
       id: 2,
       title: "Class 10 Foundation Course",
       description: "Board Excellence + Competitive Readiness",
-      price: 18999,
       image: img10th,
     },
     {
       id: 3,
       title: "Class 11 JEE Course",
       description: "Master Concepts. Crack the Competition.",
-      price: 39999,
       image: img11Jee,
     },
     {
       id: 4,
       title: "Class 11 NEET Course",
       description: "Build Medical Dreams from Day One",
-      price: 39999,
       image: img11Neet,
     },
     {
       id: 5,
       title: "Class 12 JEE Course",
       description: "Refine, Revise & Rank Higher",
-      price: 44999,
       image: img12Jee,
     },
     {
       id: 6,
       title: "Class 12 NEET Course",
       description: "Precision. Practice. Performance.",
-      price: 44999,
       image: img12Neet,
     },
     {
       id: 7,
       title: "JEE Crash Course",
       description: "Last-Minute Power Boost for JEE",
-      price: 8999,
       image: imgJeeCrash,
     },
     {
       id: 8,
       title: "NEET Crash Course",
       description: "Revise Smart. Score High.",
-      price: 8999,
       image: imgNeetCrash,
     },
   ];
-
-  const handleAddToCart = (course) => {
-    addToCart(course);
-    navigate("/cart");
-  };
 
   const handleExplore = (courseId) => {
     navigate(`/course/${courseId}`);
@@ -94,9 +79,6 @@ export default function Courses() {
             <Link to="/" className="courses-nav-link">
               Home
             </Link>
-            <Link to="/cart" className="courses-nav-link courses-cart-link">
-              Cart 🛒
-            </Link>
           </div>
         </div>
       </header>
@@ -106,7 +88,7 @@ export default function Courses() {
           <h2 className="courses-page-title">Our Courses</h2>
           <div className="courses-title-divider"></div>
           <p className="courses-intro">
-            Choose from our expertly designed courses to excel in your academic
+            Explore our expertly designed courses to excel in your academic
             journey
           </p>
         </div>
@@ -152,26 +134,13 @@ export default function Courses() {
               <div className="course-content">
                 <h3 className="course-title">{course.title}</h3>
                 <p className="course-description">{course.description}</p>
-                <div className="course-footer">
-                  <div className="course-price">
-                    ₹{course.price.toLocaleString("en-IN")}
-                  </div>
-                </div>
+                
                 <div className="course-buttons">
                   <button
                     className="course-explore-btn"
                     onClick={() => handleExplore(course.id)}
                   >
-                    Explore
-                  </button>
-                  <button
-                    className={`course-add-btn ${
-                      isInCart(course.id) ? "in-cart" : ""
-                    }`}
-                    onClick={() => handleAddToCart(course)}
-                    disabled={isInCart(course.id)}
-                  >
-                    {isInCart(course.id) ? "In Cart ✓" : "Add to Cart"}
+                    Explore Course
                   </button>
                 </div>
               </div>
