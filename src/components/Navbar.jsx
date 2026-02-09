@@ -39,7 +39,7 @@ export default function Navbar({
             rel="noopener noreferrer"
             className="scolsat-button"
           >
-            <span className="scolsat-text">Scolsat</span>
+            <span className="scolsat-text">Scholsat</span>
             <span className="scolsat-icon">🚀</span>
           </a>
 
