@@ -34,7 +34,7 @@ export default function Navbar({
 
         <div className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>
           <a
-            href="https://quiz-app-production-9e39.up.railway.app"
+            href="https://quiz.plus4academy.com/login"
             target="_blank"
             rel="noopener noreferrer"
             className="scolsat-button"
