@@ -226,7 +226,7 @@ section {
 /* Scolsat Special Button */
 .scolsat-button {
   background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-  color: #fff;
+  color:linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
   border: none;
   padding: 10px 20px;
   font-size: 15px;
