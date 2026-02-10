@@ -226,7 +226,7 @@ section {
 /* Scolsat Special Button */
 .scolsat-button {
   background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-  color:linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #fff; /* ✅ solid color for text */
   border: none;
   padding: 10px 20px;
   font-size: 15px;
@@ -242,6 +242,17 @@ section {
   gap: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  -webkit-appearance: none; /* ✅ prevents browser default button styles */
+  appearance: none;
+}
+
+/* ✅ Prevent any color/background change on click */
+.scolsat-button:active,
+.scolsat-button:focus {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #fff;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
 }
 
 .scolsat-button::before {
@@ -251,7 +262,7 @@ section {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background:linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
   border-radius: 26px 9px 26px 9px;
   z-index: -1;
   opacity: 0;
@@ -277,15 +288,8 @@ section {
 }
 
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-3px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
 }
 
 .nav-link {
