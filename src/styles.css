@@ -456,13 +456,8 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: none;
   border: none;
   cursor: pointer;
-  font: inherit;
-  /* inherit font from parent */
-  color: inherit;
-  /* inherit text color */
   text-decoration: none;
   /* remove underline */
 }
@@ -470,8 +465,6 @@ section {
 .scolsat-button:hover {
   text-decoration: none;
   /* keep underline off on hover */
-  color: inherit;
-  /* optional: prevent hover color change */
 }
 /* ========================================
    Hero Styles
