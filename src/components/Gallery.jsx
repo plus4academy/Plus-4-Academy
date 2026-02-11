@@ -32,7 +32,6 @@ export default function Gallery() {
     { id: 3, caption: "Test Series" },
     { id: 4, caption: "One-on-One Mentoring" },
     { id: 5, caption: "Our Trips" },
-    { id: 6, caption: "Student Success Stories" },
     { id: 7, caption: "Celebrations" },
   ];
 
