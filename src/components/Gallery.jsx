@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-const images = import.meta.glob("../assets/*.{jpg,png}", { eager: true });
+const images = import.meta.glob("../assets/*.{jpg,png,jpeg}", { eager: true });
 
 export default function Gallery() {
   const ref = useRef(null);
@@ -22,12 +22,13 @@ export default function Gallery() {
   }, []);
 
   const galleryItems = [
-    { id: 1, caption: "Classroom Session", image: "classroomsession.jpg" },
+    { id: 1, caption: "Classroom Session", image: "classroomsession.png" },
     { id: 2, caption: "Doubt Solving", image: "doubtsolving.jpg" },
     { id: 3, caption: "Test Series", image: "testseries.jpg" },
-    { id: 4, caption: "One-on-One Mentoring", image: "oneonone.jpg" },
-    { id: 5, caption: "Our Trips", image: "ourtrips.jpg" },
-    { id: 6, caption: "Celebrations", image: "celebrations.jpg" },
+    { id: 4, caption: "One-on-One Mentoring", image: "mentoring.jpg" },
+    { id: 5, caption: "Our Trips", image: "trips.jpeg" },
+    { id: 6, caption: "Celebrations", image: "celebration.jpeg" },
+    { id: 7, caption: "Self Study Space", image: "selfstudyspace.jpg" },
   ];
 
   return (
