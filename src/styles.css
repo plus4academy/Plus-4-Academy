@@ -1019,7 +1019,7 @@ section {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 1100;
   box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
   transition: all 0.3s ease;
 }

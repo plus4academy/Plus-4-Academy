@@ -6,46 +6,63 @@ export default function FloatingScholsatButton() {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
 
   useEffect(() => {
-    let navScholsatButton = null;
-    let observer = null;
+    const isElementVisibleInViewport = (el) => {
+      if (!el) return false;
 
-    const updateVisibilityFromScroll = () => {
-      if (!navScholsatButton) {
-        setShowFloatingButton(window.scrollY > 100);
-      }
-    };
-
-    const setupObserver = () => {
-      navScholsatButton = document.querySelector(".navbar .scolsat-button");
-
-      if (!navScholsatButton) {
-        updateVisibilityFromScroll();
-        return;
+      const style = window.getComputedStyle(el);
+      if (
+        style.display === "none" ||
+        style.visibility === "hidden" ||
+        Number(style.opacity) === 0
+      ) {
+        return false;
       }
 
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          const hasScrolledDown = window.scrollY > 100;
-          setShowFloatingButton(!entry.isIntersecting && hasScrolledDown);
-        },
-        {
-          threshold: 0.25,
-        }
+      const rect = el.getBoundingClientRect();
+      if (rect.width <= 0 || rect.height <= 0) return false;
+
+      const inViewport =
+        rect.bottom > 0 &&
+        rect.right > 0 &&
+        rect.top < window.innerHeight &&
+        rect.left < window.innerWidth;
+      if (!inViewport) return false;
+
+      // Point visibility check helps detect cases where the element exists
+      // but is clipped by collapsed mobile nav containers.
+      const x = Math.min(
+        Math.max(rect.left + rect.width / 2, 0),
+        window.innerWidth - 1
       );
-
-      observer.observe(navScholsatButton);
+      const y = Math.min(
+        Math.max(rect.top + rect.height / 2, 0),
+        window.innerHeight - 1
+      );
+      const topElement = document.elementFromPoint(x, y);
+      return !!topElement && (el === topElement || el.contains(topElement));
     };
 
-    setupObserver();
-    window.addEventListener("scroll", updateVisibilityFromScroll, {
+    const evaluateFloatingButtonVisibility = () => {
+      const navScholsatButton = document.querySelector(".navbar .scolsat-button");
+      const hasScrolledDown = window.scrollY > 80;
+      const isNavButtonVisible = isElementVisibleInViewport(navScholsatButton);
+      setShowFloatingButton(hasScrolledDown && !isNavButtonVisible);
+    };
+
+    evaluateFloatingButtonVisibility();
+    window.addEventListener("scroll", evaluateFloatingButtonVisibility, {
       passive: true,
     });
-    window.addEventListener("resize", updateVisibilityFromScroll);
+    window.addEventListener("resize", evaluateFloatingButtonVisibility);
+    window.addEventListener("orientationchange", evaluateFloatingButtonVisibility);
 
     return () => {
-      window.removeEventListener("scroll", updateVisibilityFromScroll);
-      window.removeEventListener("resize", updateVisibilityFromScroll);
-      if (observer) observer.disconnect();
+      window.removeEventListener("scroll", evaluateFloatingButtonVisibility);
+      window.removeEventListener("resize", evaluateFloatingButtonVisibility);
+      window.removeEventListener(
+        "orientationchange",
+        evaluateFloatingButtonVisibility
+      );
     };
   }, []);
 
