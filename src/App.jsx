@@ -10,6 +10,7 @@ import Reviews from "./components/Reviews";
 import JoinUsForm from "./components/JoinUsForm";
 import Footer from "./components/Footer";
 import FloatingJoinButton from "./components/FloatingJoinButton";
+import FloatingScholsatButton from "./components/FloatingScholsatButton";
 import JoinUsFormModal from "./components/JoinUsFormModal";
 import RefundPolicyPage from "./components/RefundPolicyPage";
 import ContactUsPage from "./components/ContactUsPage";
@@ -48,6 +49,7 @@ function HomePage() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
 
+      <FloatingScholsatButton />
       <FloatingJoinButton onJoinClick={() => scrollToSection(joinRef)} />
       <JoinUsFormModal />
 

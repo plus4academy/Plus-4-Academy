@@ -40,7 +40,7 @@ export default function Navbar({
             className="scolsat-button"
           >
             <span className="scolsat-text">Scholsat</span>
-            <span className="scolsat-icon">🚀</span>
+            <span className="scolsat-icon">{"\uD83D\uDE80"}</span>
           </a>
 
           <button onClick={onHomeClick} className="nav-link">
