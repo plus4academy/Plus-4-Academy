@@ -70,7 +70,7 @@ export default function FloatingScholsatButton() {
 
   return (
     <a
-      href="https://quiz.plus4academy.com/login"
+      href="https://quiz.plus4academy.com/signup"
       target="_blank"
       rel="noopener noreferrer"
       className="floating-scholsat-button"
