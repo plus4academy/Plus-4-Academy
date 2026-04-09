@@ -92,7 +92,7 @@ export default function JoinUsForm() {
         <div className="form-wrapper">
           <h2 className="form-title">Join Plus 4 Academy</h2>
           <p className="form-subtitle">
-            Enquire Now & Get 10% Instant Scholarship On All The Courses.
+           Enquire Now & someone from our team will contact you soon!
           </p>
 
           
