@@ -109,7 +109,7 @@ export default function RefundPolicyPage() {
       <header className="refund-header">
         <div className="refund-header-container">
           <h1 className="refund-logo">Plus 4 Academy</h1>
-          <Link to="/" className="refund-back-button">
+          <Link to="/" className="site-home-link">
             ← Back to Home
           </Link>
         </div>

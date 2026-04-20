@@ -76,7 +76,7 @@ export default function Courses() {
         <div className="courses-header-container">
           <h1 className="courses-logo">Plus 4 Academy</h1>
           <div className="courses-nav">
-            <Link to="/" className="courses-nav-link">
+            <Link to="/" className="site-home-link">
               Home
             </Link>
           </div>

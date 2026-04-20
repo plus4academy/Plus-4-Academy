@@ -18,6 +18,7 @@ import TermsandConditions from "./components/TermsandConditions";
 import Courses from "./components/Courses";
 import CourseDetail from "./components/CourseDetail";
 import Cart from "./components/Cart";
+import DirectorMessagePage from "./components/DirectorMessagePage";
 import "./styles.css";
 
 // Home Page Component
@@ -100,6 +101,7 @@ export default function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/course/:courseId" element={<CourseDetail />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/directors-message" element={<DirectorMessagePage />} />
           </Routes>
         </div>
       </Router>

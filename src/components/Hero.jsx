@@ -1,16 +1,8 @@
 "use client";
 
-import { useNavigate } from "react-router-dom";
-
 export default function Hero({ onEnquireClick }) {
-  const navigate = useNavigate();
-
   const handleDemoClick = () => {
     window.open("https://www.youtube.com/@Plusfouracademy", "_blank");
-  };
-
-  const handleCoursesClick = () => {
-    navigate("/courses");
   };
 
   return (
@@ -30,17 +22,9 @@ export default function Hero({ onEnquireClick }) {
           </button>
         </div>
 
-        <div className="hero-cards">
-          <div className="hero-card hero-card-purple" onClick={handleDemoClick}>
+        <div className="hero-cards hero-cards-single">
+          <div className="hero-card hero-card-orange" onClick={handleDemoClick}>
             <span className="card-text">Watch our demo lectures</span>
-            <span className="card-hover-text">Click here</span>
-          </div>
-
-          <div
-            className="hero-card hero-card-orange"
-            onClick={handleCoursesClick}
-          >
-            <span className="card-text">Courses we offer</span>
             <span className="card-hover-text">Click here</span>
           </div>
         </div>

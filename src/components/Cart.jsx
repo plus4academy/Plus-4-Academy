@@ -21,7 +21,7 @@ export default function Cart() {
         <header className="cart-header">
           <div className="cart-header-container">
             <h1 className="cart-logo">Plus 4 Academy</h1>
-            <Link to="/" className="cart-nav-link">
+            <Link to="/" className="site-home-link">
               Home
             </Link>
           </div>
@@ -49,10 +49,10 @@ export default function Cart() {
         <div className="cart-header-container">
           <h1 className="cart-logo">Plus 4 Academy</h1>
           <div className="cart-nav">
-            <Link to="/" className="cart-nav-link">
+            <Link to="/" className="site-home-link">
               Home
             </Link>
-            <Link to="/courses" className="cart-nav-link">
+            <Link to="/courses" className="site-page-link">
               Courses
             </Link>
           </div>

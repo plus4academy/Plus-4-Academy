@@ -170,10 +170,10 @@ export default function CourseDetail() {
         <div className="course-detail-header-container">
           <h1 className="course-detail-logo">Plus 4 Academy</h1>
           <div className="course-detail-nav">
-            <Link to="/" className="course-detail-nav-link">
+            <Link to="/" className="site-home-link">
               Home
             </Link>
-            <Link to="/courses" className="course-detail-nav-link">
+            <Link to="/courses" className="site-page-link">
               Courses
             </Link>
           </div>

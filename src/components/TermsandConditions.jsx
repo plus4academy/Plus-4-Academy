@@ -483,7 +483,7 @@ export default function TermsandConditions() {
         <header className="terms-header">
           <div className="terms-header-container">
             <h1 className="terms-logo">Plus 4 Academy</h1>
-            <Link to="/" className="terms-back-button">
+            <Link to="/" className="site-home-link">
               <span>← Back to Home</span>
             </Link>
           </div>

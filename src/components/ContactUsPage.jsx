@@ -101,7 +101,7 @@ export default function ContactUsPage() {
       <header className="contact-header">
         <div className="contact-header-container">
           <h1 className="contact-logo">Plus 4 Academy</h1>
-          <Link to="/" className="contact-back-button">
+          <Link to="/" className="site-home-link">
             ← Back to Home
           </Link>
         </div>
