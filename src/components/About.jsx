@@ -1,160 +1,183 @@
-"use client";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { useEffect, useRef } from "react";
+const courses = [
+  {
+    title: "Foundation Program",
+    icon: "9",
+    accent: "blue",
+    points: [
+      "Class 9 and 10 Maths and Science",
+      "Strong basics for school exams",
+      "Early Olympiad and competitive exposure",
+    ],
+  },
+  {
+    title: "Class 11 and 12 Science",
+    icon: "12",
+    accent: "purple",
+    points: [
+      "PCM and PCB board exam excellence",
+      "NCERT-aligned concept coverage",
+      "Structured, exam-focused practice",
+    ],
+  },
+  {
+    title: "JEE and NEET Preparation",
+    icon: "J",
+    accent: "amber",
+    points: [
+      "Advanced problem-solving methods",
+      "Previous year question analysis",
+      "Mock tests and exam strategy",
+    ],
+  },
+];
+
+const choices = [
+  {
+    value: 10,
+    suffix: "+",
+    icon: "C",
+    title: "Concept First",
+    text: "Students build clarity before speed.",
+  },
+  {
+    value: 2,
+    suffix: "x",
+    icon: "B",
+    title: "Boards + Competitive",
+    text: "One plan supports both goals.",
+  },
+  {
+    value: 25,
+    suffix: "",
+    icon: "S",
+    title: "Small Batches",
+    text: "More attention, cleaner feedback.",
+  },
+  {
+    value: 100,
+    suffix: "%",
+    icon: "M",
+    title: "Mentorship",
+    text: "Regular tracking for students and parents.",
+  },
+];
+
+function CountUp({ value, suffix, active }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!active) return;
+
+    let frameId;
+    const duration = 1100;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(value * eased));
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(tick);
+      }
+    };
+
+    frameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId);
+  }, [active, value]);
+
+  return (
+    <span>
+      {active ? count : 0}
+      {suffix}
+    </span>
+  );
+}
 
 export default function About() {
+  const navigate = useNavigate();
   const ref = useRef(null);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
+          setActive(true);
+          entry.target.classList.add("is-visible");
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.18 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    const node = ref.current;
+    if (node) observer.observe(node);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (node) observer.unobserve(node);
     };
   }, []);
 
   return (
-    <section className="about" ref={ref}>
-      <div className="about-container">
-        <h2 className="section-title">About Plus 4 Academy</h2>
+    <section className="home-showcase" ref={ref}>
+      <div className="home-showcase-container">
+        <div className="home-section-head reveal-item">
+          <h2 className="section-title gradient-heading">Courses We Offer</h2>
+        </div>
 
-        <div className="about-content">
-          <div className="why-section">
-            <h3 className="about-subtitle">Why Plus 4 Academy?</h3>
-            <p className="about-text">
-              Plus 4 Academy was founded to solve one major problem students
-              face today — lack of conceptual clarity and proper guidance.
-            </p>
-            <p className="about-text">
-              We provide structured learning, expert teaching, and personal
-              mentorship to help students excel in school exams while preparing
-              confidently for JEE Main, JEE Advanced, and NEET.
-            </p>
-          </div>
+        <div className="home-course-grid">
+          {courses.map((course, index) => (
+            <article
+              className={`home-course-card accent-${course.accent} reveal-item`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+              key={course.title}
+            >
+              <div className="home-course-accent"></div>
+              <div className="home-course-icon">{course.icon}</div>
+              <h3>{course.title}</h3>
+              <ul>
+                {course.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <button
+                className="home-course-cta"
+                onClick={() => navigate("/courses")}
+              >
+                {index === 2 ? "Enroll Now" : "Know More"}
+              </button>
+            </article>
+          ))}
+        </div>
 
-          <div className="philosophy-section">
-            <h3 className="philosophy-title">Our Teaching Philosophy</h3>
-            <h4 className="philosophy-subtitle">
-              Learn Concepts. Not Just Answers.
-            </h4>
-            <p className="about-text">
-              At Plus 4 Academy, we focus on deep understanding instead of rote
-              learning.
-            </p>
-            <p className="about-text">Our teaching emphasizes:</p>
-            <ul className="philosophy-list">
-              <li>Strong conceptual foundations</li>
-              <li>Logical and analytical thinking</li>
-              <li>Application-based problem solving</li>
-              <li>Confidence to tackle unfamiliar questions</li>
-            </ul>
-            <p className="about-text emphasis-text">
-              We don't train students to memorize — we train them to think.
-            </p>
-          </div>
+        <div className="home-section-head choose-head reveal-item">
+          <h2 className="section-title gradient-heading">
+            Why Students & Parents Choose Us
+          </h2>
+        </div>
 
-          <div className="integrated-section">
-            <h3 className="integrated-title">
-              Integrated Boards + Competitive Preparation
-            </h3>
-            <h4 className="integrated-subtitle">One Preparation. Two Goals.</h4>
-            <p className="about-text">Our integrated curriculum ensures:</p>
-            <ul className="integrated-list">
-              <li>Strict alignment with NCERT syllabus</li>
-              <li>Gradual introduction to JEE & NEET level problems</li>
-              <li>Regular revision and testing</li>
-              <li>Reduced academic stress through smart planning</li>
-            </ul>
-            <p className="about-text">
-              Students perform better in boards without sacrificing competitive
-              exam preparation.
-            </p>
-          </div>
-
-          <div className="courses-section">
-            <h3 className="courses-title">Courses We Offer</h3>
-            <div className="courses-grid">
-              <div className="course-card">
-                <h4>Foundation Program (Class 9 & 10)</h4>
-                <ul className="course-list">
-                  <li>Strong basics in Maths & Science</li>
-                  <li>Early exposure to competitive concepts</li>
-                  <li>Preparation for Olympiads & school exams</li>
-                </ul>
-              </div>
-              <div className="course-card">
-                <h4>Class 11 & 12 Science Coaching (PCM / PCB)</h4>
-                <ul className="course-list">
-                  <li>Board exam excellence</li>
-                  <li>Competitive exam readiness</li>
-                  <li>Structured, exam-focused learning</li>
-                </ul>
-              </div>
-              <div className="course-card">
-                <h4>JEE & NEET Preparation</h4>
-                <ul className="course-list">
-                  <li>In-depth concept coverage</li>
-                  <li>Advanced problem-solving techniques</li>
-                  <li>Previous year question analysis</li>
-                  <li>Exam strategy & time management</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="faculty-section">
-            <h3 className="faculty-title">Faculty & Mentorship</h3>
-            <h4 className="faculty-subtitle">More Than Teachers — Mentors</h4>
-            <p className="about-text">Our experienced faculty ensures:</p>
-            <ul className="faculty-list">
-              <li>Simple explanation of complex topics</li>
-              <li>Individual doubt-clearing sessions</li>
-              <li>Continuous academic monitoring</li>
-              <li>Motivation and personal guidance</li>
-            </ul>
-            <p className="about-text emphasis-text">
-              Every student receives personal attention.
-            </p>
-          </div>
-
-          <div className="assessment-section">
-            <h3 className="assessment-title">
-              Assessments & Performance Tracking
-            </h3>
-            <ul className="assessment-list">
-              <li>Chapter-wise tests</li>
-              <li>Cumulative assessments</li>
-              <li>Full-length mock exams</li>
-              <li>Detailed performance analysis</li>
-            </ul>
-            <p className="about-text">
-              Regular feedback keeps students and parents informed and on track.
-            </p>
-          </div>
-
-          <div className="why-us">
-            <h3 className="why-us-title">Why Students & Parents Choose Us</h3>
-            <ul className="trust-list">
-              <li>✔ Concept-focused teaching</li>
-              <li>✔ Integrated board + competitive approach</li>
-              <li>✔ Small batch sizes</li>
-              <li>✔ Regular tests & feedback</li>
-              <li>✔ Dedicated personal mentorship</li>
-            </ul>
-          </div>
+        <div className="choose-grid">
+          {choices.map((item, index) => (
+            <article
+              className="choose-card reveal-item"
+              style={{ transitionDelay: `${index * 100}ms` }}
+              key={item.title}
+            >
+              <div className="choose-icon">{item.icon}</div>
+              <strong className="choose-stat">
+                <CountUp
+                  value={item.value}
+                  suffix={item.suffix}
+                  active={active}
+                />
+              </strong>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

@@ -19,12 +19,12 @@ import Courses from "./components/Courses";
 import CourseDetail from "./components/CourseDetail";
 import Cart from "./components/Cart";
 import DirectorMessagePage from "./components/DirectorMessagePage";
+import AboutUsPage from "./components/AboutUsPage";
 import "./styles.css";
 
 // Home Page Component
 function HomePage() {
   const homeRef = useRef(null);
-  const aboutRef = useRef(null);
   const galleryRef = useRef(null);
   const reviewsRef = useRef(null);
   const joinRef = useRef(null);
@@ -41,7 +41,6 @@ function HomePage() {
       <TopBar />
       <Navbar
         onHomeClick={() => scrollToSection(homeRef)}
-        onAboutClick={() => scrollToSection(aboutRef)}
         onGalleryClick={() => scrollToSection(galleryRef)}
         onReviewsClick={() => scrollToSection(reviewsRef)}
         onJoinClick={() => scrollToSection(joinRef)}
@@ -58,7 +57,7 @@ function HomePage() {
         <Hero onEnquireClick={() => scrollToSection(joinRef)} />
       </section>
 
-      <section ref={aboutRef}>
+      <section>
         <About />
       </section>
 
@@ -99,6 +98,7 @@ export default function App() {
               element={<TermsandConditions />}
             />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/course/:courseId" element={<CourseDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/directors-message" element={<DirectorMessagePage />} />

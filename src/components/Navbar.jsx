@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Navbar({
   onHomeClick,
-  onAboutClick,
   onGalleryClick,
   onReviewsClick,
   onJoinClick,
@@ -89,9 +88,13 @@ export default function Navbar({
               Director&apos;s Message
             </Link>
 
-            <button onClick={onAboutClick} className="nav-link">
+            <Link
+              to="/about-us"
+              className="nav-link"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               About Us
-            </button>
+            </Link>
 
             <Link
               to="/courses"
