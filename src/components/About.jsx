@@ -36,22 +36,19 @@ const courses = [
 
 const choices = [
   {
-    value: 10,
-    suffix: "+",
+    stat: "",
     icon: "C",
     title: "Concept First",
     text: "Students build clarity before speed.",
   },
   {
-    value: 2,
-    suffix: "x",
+    stat: "",
     icon: "B",
     title: "Boards + Competitive",
     text: "One plan supports both goals.",
   },
   {
-    value: 25,
-    suffix: "",
+    stat: "25-30",
     icon: "S",
     title: "Small Batches",
     text: "More attention, cleaner feedback.",
@@ -167,13 +164,17 @@ export default function About() {
               key={item.title}
             >
               <div className="choose-icon">{item.icon}</div>
-              <strong className="choose-stat">
-                <CountUp
-                  value={item.value}
-                  suffix={item.suffix}
-                  active={active}
-                />
-              </strong>
+              {item.stat !== "" && (
+                <strong className="choose-stat">
+                  {item.stat ?? (
+                    <CountUp
+                      value={item.value}
+                      suffix={item.suffix}
+                      active={active}
+                    />
+                  )}
+                </strong>
+              )}
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
