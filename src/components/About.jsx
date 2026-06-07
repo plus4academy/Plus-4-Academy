@@ -144,7 +144,7 @@ export default function About() {
                 className="home-course-cta"
                 onClick={() => navigate("/courses")}
               >
-                {index === 2 ? "Enroll Now" : "Know More"}
+                Know More
               </button>
             </article>
           ))}
